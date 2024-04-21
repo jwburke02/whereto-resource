@@ -9,7 +9,7 @@ import {Picker} from '@react-native-picker/picker';
 import DropDownPicker from 'react-native-dropdown-picker';
 
 
-const GOOGLE_PLACES_API_KEY = 'AIzaSyBg-pe_LHT7KSDfsddZCZcCzKggF8fHV5g';
+const GOOGLE_PLACES_API_KEY = 'YOUR_API_KEY';
 
 function HelpModal({ isVisible, onClose }) {
   return (
