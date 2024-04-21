@@ -1,0 +1,614 @@
+{
+    "Public Alley 427": {
+        "coordinates": [
+            [
+                42.3507801,
+                -71.0848311
+            ],
+            [
+                42.3507575,
+                -71.0849174
+            ]
+        ],
+        "detections": [
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350841168405644,
+                "lng": -71.08475191256518,
+                "conf": 0.77314692735672,
+                "image_url": null,
+                "text_read": null,
+                "did": 29720942
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350728879780625,
+                "lng": -71.08474521351022,
+                "conf": 0.8085683584213257,
+                "image_url": null,
+                "text_read": null,
+                "did": 3644463
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.35081856840564,
+                "lng": -71.08483821256517,
+                "conf": 0.8169471025466919,
+                "image_url": null,
+                "text_read": null,
+                "did": 7017749
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35072219970892,
+                "lng": -71.08482383777765,
+                "conf": 0.8148323893547058,
+                "image_url": null,
+                "text_read": null,
+                "did": 94013501
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350706279780624,
+                "lng": -71.08483151351021,
+                "conf": 0.8192609548568726,
+                "image_url": null,
+                "text_read": null,
+                "did": 44273642
+            }
+        ]
+    },
+    "Gloucester Street": {
+        "coordinates": [
+            [
+                42.3507575,
+                -71.0849174
+            ],
+            [
+                42.3510804,
+                -71.085075
+            ],
+            [
+                42.3510804,
+                -71.085075
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3512054,
+                -71.085138
+            ],
+            [
+                42.3512054,
+                -71.085138
+            ],
+            [
+                42.3512294,
+                -71.0851493
+            ],
+            [
+                42.3512294,
+                -71.0851493
+            ],
+            [
+                42.3515298,
+                -71.0852991
+            ],
+            [
+                42.3515298,
+                -71.0852991
+            ],
+            [
+                42.3518541,
+                -71.0854611
+            ],
+            [
+                42.3518541,
+                -71.0854611
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.3519552,
+                -71.0855067
+            ],
+            [
+                42.3519552,
+                -71.0855067
+            ],
+            [
+                42.3519833,
+                -71.0855182
+            ],
+            [
+                42.3519833,
+                -71.0855182
+            ],
+            [
+                42.3520099,
+                -71.0855289
+            ],
+            [
+                42.3520099,
+                -71.0855289
+            ],
+            [
+                42.3520402,
+                -71.0855438
+            ]
+        ],
+        "detections": [
+            {
+                "did": 7017749,
+                "class_name": "Road Sign",
+                "lat": 42.35081856840564,
+                "lng": -71.08483821256517,
+                "conf": 0.8169471025466919,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 94013501,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35072219970892,
+                "lng": -71.08482383777765,
+                "conf": 0.8148323893547058,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 44273642,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350706279780624,
+                "lng": -71.08483151351021,
+                "conf": 0.8192609548568726,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351098595461195,
+                "lng": -71.085022062334,
+                "conf": 0.7653768062591553,
+                "image_url": null,
+                "text_read": null,
+                "did": 20310331
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35126762159549,
+                "lng": -71.0850597154354,
+                "conf": 0.8003550171852112,
+                "image_url": null,
+                "text_read": null,
+                "did": 63562075
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351252868135276,
+                "lng": -71.08504998422792,
+                "conf": 0.7869747877120972,
+                "image_url": null,
+                "text_read": null,
+                "did": 11359104
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35117613748877,
+                "lng": -71.08523393512803,
+                "conf": 0.7867113351821899,
+                "image_url": null,
+                "text_read": null,
+                "did": 80213283
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.351501392925755,
+                "lng": -71.08539498033235,
+                "conf": 0.8411375284194946,
+                "image_url": null,
+                "text_read": null,
+                "did": 26213043
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.351596462051994,
+                "lng": -71.08537363972648,
+                "conf": 0.7667357325553894,
+                "image_url": null,
+                "text_read": null,
+                "did": 93234450
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351566568760084,
+                "lng": -71.08520610506314,
+                "conf": 0.8401249647140503,
+                "image_url": null,
+                "text_read": null,
+                "did": 25238646
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.3515496231221,
+                "lng": -71.08520108447148,
+                "conf": 0.8396516442298889,
+                "image_url": null,
+                "text_read": null,
+                "did": 82693496
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.35208017972708,
+                "lng": -71.08563546035906,
+                "conf": 0.7748515605926514,
+                "image_url": null,
+                "text_read": null,
+                "did": 98996491
+            }
+        ]
+    },
+    "Marlborough Street": {
+        "coordinates": [
+            [
+                42.3514,
+                -71.0841509
+            ],
+            [
+                42.3511692,
+                -71.085025
+            ],
+            [
+                42.3511692,
+                -71.085025
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511473,
+                -71.0851094
+            ],
+            [
+                42.3511228,
+                -71.0852015
+            ],
+            [
+                42.3511228,
+                -71.0852015
+            ],
+            [
+                42.3511137,
+                -71.0852329
+            ],
+            [
+                42.3511137,
+                -71.0852329
+            ],
+            [
+                42.3509332,
+                -71.0858806
+            ]
+        ],
+        "detections": [
+            {
+                "class_name": "Road Sign",
+                "lat": 42.351339178119765,
+                "lng": -71.08407152305823,
+                "conf": 0.8290471434593201,
+                "image_url": null,
+                "text_read": null,
+                "did": 82016332
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.35110837811977,
+                "lng": -71.08494562305823,
+                "conf": 0.7909541130065918,
+                "image_url": null,
+                "text_read": null,
+                "did": 40782285
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.351125489958704,
+                "lng": -71.08511494127134,
+                "conf": 0.8205499649047852,
+                "image_url": null,
+                "text_read": null,
+                "did": 93311213
+            },
+            {
+                "did": 20310331,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351098595461195,
+                "lng": -71.085022062334,
+                "conf": 0.7653768062591553,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350834122805225,
+                "lng": -71.08586704605315,
+                "conf": 0.8144379258155823,
+                "image_url": null,
+                "text_read": null,
+                "did": 23408217
+            },
+            {
+                "class_name": "Road Sign",
+                "lat": 42.35096547669369,
+                "lng": -71.08597524784754,
+                "conf": 0.8331897854804993,
+                "image_url": null,
+                "text_read": null,
+                "did": 37708158
+            }
+        ]
+    },
+    "Public Alley 415": {
+        "coordinates": [
+            [
+                42.3515298,
+                -71.0852991
+            ],
+            [
+                42.3515063,
+                -71.0853851
+            ]
+        ],
+        "detections": [
+            {
+                "did": 26213043,
+                "class_name": "Road Sign",
+                "lat": 42.351501392925755,
+                "lng": -71.08539498033235,
+                "conf": 0.8411375284194946,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 93234450,
+                "class_name": "Road Sign",
+                "lat": 42.351596462051994,
+                "lng": -71.08537363972648,
+                "conf": 0.7667357325553894,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 25238646,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351566568760084,
+                "lng": -71.08520610506314,
+                "conf": 0.8401249647140503,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 82693496,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.3515496231221,
+                "lng": -71.08520108447148,
+                "conf": 0.8396516442298889,
+                "text_read": null,
+                "image_url": null
+            }
+        ]
+    },
+    "Public Alley 428": {
+        "coordinates": [
+            [
+                42.3507575,
+                -71.0849174
+            ],
+            [
+                42.3507345,
+                -71.0850013
+            ]
+        ],
+        "detections": [
+            {
+                "did": 7017749,
+                "class_name": "Road Sign",
+                "lat": 42.35081856840564,
+                "lng": -71.08483821256517,
+                "conf": 0.8169471025466919,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 94013501,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35072219970892,
+                "lng": -71.08482383777765,
+                "conf": 0.8148323893547058,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 44273642,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.350706279780624,
+                "lng": -71.08483151351021,
+                "conf": 0.8192609548568726,
+                "text_read": null,
+                "image_url": null
+            }
+        ]
+    },
+    "Beacon Street": {
+        "coordinates": [
+            [
+                42.3518977,
+                -71.0855703
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.351919,
+                -71.0854923
+            ],
+            [
+                42.3519411,
+                -71.0854068
+            ],
+            [
+                42.3519411,
+                -71.0854068
+            ],
+            [
+                42.3519504,
+                -71.0853731
+            ]
+        ],
+        "detections": [
+            {
+                "class_name": "Road Sign",
+                "lat": 42.3519856959646,
+                "lng": -71.08552279515588,
+                "conf": 0.8284693956375122,
+                "image_url": null,
+                "text_read": null,
+                "did": 77055412
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351815802157795,
+                "lng": -71.08551291756852,
+                "conf": 0.7956832051277161,
+                "image_url": null,
+                "text_read": null,
+                "did": 90447655
+            }
+        ]
+    },
+    "Public Alley 416": {
+        "coordinates": [
+            [
+                42.3515529,
+                -71.0852115
+            ],
+            [
+                42.3515298,
+                -71.0852991
+            ]
+        ],
+        "detections": [
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.3516059596178,
+                "lng": -71.08512673752624,
+                "conf": 0.8178991675376892,
+                "image_url": null,
+                "text_read": null,
+                "did": 48556662
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351508648696274,
+                "lng": -71.0851218237929,
+                "conf": 0.7833861708641052,
+                "image_url": null,
+                "text_read": null,
+                "did": 79371571
+            },
+            {
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.35149355268257,
+                "lng": -71.08513101462299,
+                "conf": 0.783286988735199,
+                "image_url": null,
+                "text_read": null,
+                "did": 60393798
+            },
+            {
+                "did": 26213043,
+                "class_name": "Road Sign",
+                "lat": 42.351501392925755,
+                "lng": -71.08539498033235,
+                "conf": 0.8411375284194946,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 93234450,
+                "class_name": "Road Sign",
+                "lat": 42.351596462051994,
+                "lng": -71.08537363972648,
+                "conf": 0.7667357325553894,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 25238646,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.351566568760084,
+                "lng": -71.08520610506314,
+                "conf": 0.8401249647140503,
+                "text_read": null,
+                "image_url": null
+            },
+            {
+                "did": 82693496,
+                "class_name": "Single Space Parking Meter",
+                "lat": 42.3515496231221,
+                "lng": -71.08520108447148,
+                "conf": 0.8396516442298889,
+                "text_read": null,
+                "image_url": null
+            }
+        ]
+    },
+    "radius": 0.05,
+    "center_lat": 42.3514181,
+    "center_lng": -71.0850542
+}

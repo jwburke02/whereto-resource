@@ -1,0 +1,6 @@
+{
+    "address": "123 Example Street, Boston MA, 02184",
+    "detection": "Single Space Parking Meter",
+    "confidence": 0.91,
+    "image_byte_data": "1234567890987654321abcdefghijklnopqrstuvwxyz"
+}
