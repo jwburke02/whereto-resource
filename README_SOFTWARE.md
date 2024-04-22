@@ -4,8 +4,8 @@ WhereTo is an application designed to solve the problem of locating parking and 
 
 ## Table of Contents
 1. [High Level System Overview](#High-Level-System-Overview)
-2. [Modular Overview: Frontend](#Modular-Overview:-Frontend)
-3. [Modular Overview: Backend](#Modular-Overview:-Backend)
+2. [Modular Overview Frontend](#Modular-Overview-Frontend)
+3. [Modular Overview Backend](#Modular-Overview-Backend)
 4. [Frontend Dev Tool Information](#Frontent-Dev-Tool-Information)
 5. [Backend Dev Tool Information](#Backend-Dev-Tool-Information)
 6. [Frontend Installation and Use](#Frontend-Installation-and-Use)
@@ -35,8 +35,8 @@ If there is an error at any point in the process, the Python server sends such i
 
 The last important thing to remember from a high level perspective is what is meant by the word “detection”. A detection in our system is wherever our machine learning object detection models recognize one of three things: a single-space parking meter, a multi-space parking meter, and a road sign. Each of these has different implications and displays on the frontend.
 
-## Modular Overview: Frontend
-## Modular Overview: Backend
+## Modular Overview Frontend
+## Modular Overview Backend
 ## Frontend Dev Tool Information
 ## Backend Dev Tool Information
 ## Frontend Installation and Use
