@@ -36,7 +36,32 @@ If there is an error at any point in the process, the Python server sends such i
 The last important thing to remember from a high level perspective is what is meant by the word “detection”. A detection in our system is wherever our machine learning object detection models recognize one of three things: a single-space parking meter, a multi-space parking meter, and a road sign. Each of these has different implications and displays on the frontend.
 
 ## Modular Overview Frontend
-## Modular Overview Backend
+## Modular Overview Backend  
+
+Below are simple descriptions of each module in the backend:  
+- <u><b>Database Access Module:</b></u>
+    - This module is responsible for defining the models for the data being stored in the SQL cache. Additionally, this module implements the functions necessary for interacting with the SQL cache, which are used by other modules.
+- <u><b>Detail API Module:</b></u>
+    - The DetailAPI is the module for an API which allows the requester to input a detection id  and receive a response containing detailed information about that detection.
+- <u><b>OSM Module:</b></u>
+    - This module is responsible for loading extract data from Open Street Maps and formatting it to our specifications. It utilizes an external API to get the street information, and formats the response into a list of streets.
+- <u><b>Machine Learning Module:</b></u>
+    - This module is responsible for utilizing the loaded PyTorch file in our applications machine learning workflow. It traverses over an area, scanning images with the model to detect regulations and meters.
+- <u><b>Park API Module:</b></u>
+    - This module is responsible for running the main algorithm pipeline for analyzing parking information in a given area. This module calls functions from the OSM and Machine Learning Modules in order to complete its workflow.
+- <u><b>Text Processing Module:</b></u>
+    - This module is a completely independent module, responsible for implementing a single function in order to detect text in an image 
+- <u><b>WhereTo Module:</b></u>
+    - This module is responsible for defining many application constants.
+- <u><b>Testing Module:</b></u>
+    - This test/ folder is responsible for holding the functionality unit tests for each module.
+- <u><b>app.py Module:</b></u>
+    - This module is the main driver module for the backend, it adds the resource APIs to the application and begins running it.
+- <u><b>config.py Module:</b></u>
+    - This module is defined separately for each instance where the WhereTo backend is hosted. Elaborated on later.  
+
+Below is a high level diagram, showing the relationships between each of these modules in the backend.
+
 ## Frontend Dev Tool Information
 ## Backend Dev Tool Information
 ## Frontend Installation and Use
