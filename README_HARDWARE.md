@@ -1,1 +1,3 @@
 # Hardware Report
+### Cloud Hosted Mobile Application
+WhereTo is a cloud hosted application. It is intended to be ran on a mobile device, either iOS or Android. Due to these reasons, there is no specifications for the hardware aspects of this project. That being said, there are some important requirements for any machine trying to run the backend. The machine will need at least ~50GB of disk space. This is because WhereTo relies on many dependencies that take up a lot of space. Additionally, it should be considered to run WhereTo on compute optimized hardware on Google Cloud, to speed up the computations of the machine learning model's inference.
