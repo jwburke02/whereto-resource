@@ -99,5 +99,45 @@ Below is a table showing the backend system from the outside perspective, where 
 
 ## Frontend Dev Tool Information
 ## Backend Dev Tool Information
+
+The backend system relies on the following list of developement tools and essential services:
+- Python 3.8
+- Google Street View Static API
+- Google Cloud Vision API
+- Google Cloud Geocoding API
+- Bunting Labs OSM Extract API
+
+If the system is being hosted using cloud services, we have used Google Cloud Servies which adds the following developement tools and services to the list:
+- Google Cloud Enterprise SQL
+- Google Cloud Compute Engine
+
+In order to develop and test the application, one will need to ensure their environment is set up to run these tools and connect with these services.
+
+### Python 3.8 Set Up
+
+If you are using either MacOS or Windows, downloading Python 3.8 is possible by going to the official python website and downloading the installer for the correct operating system.  
+
+For Linux users, or if one is deploying to a linux-based cloud instance, one can run `sudo apt-get install python3.8`.  
+
+To check version, either enter `python -version` or `python3 -version` in your terminal, anything >=3.8 should work.
+
+### Google API and Account Set Up
+
+In order to use the Street View and Geocoding APIs from Google, you will need access to them via an API key. This API key must be granted permissions under the Google Cloud Console to access both the Street View and Geocoding APIs. Inside of the config.py file in the backend, map_api_key is stored. This key is the API key for all Google services used by WhereTo via HTTP request. The following process is how to obtain a valid API key for these Google services:
+1. Sign into your Google account, and go to: https://console.cloud.google.com/
+2. Create a New Project, giving it a Project Name
+3. With that project selected on the console, navigate to the `APIs & Services` tab, and click on the `+ ENABLE APIS AND SERVICES` button
+4. Enable the following APIs: `Cloud Vision API`, `Street View Static API`, and `Geocoding API`. Add both `Street View Static API` and `Geocoding API` to the newly created API key. Cloud Vision will require separate configuration.
+5. Place the automatically created API key into the map_api_key value in config.py. This will enable application connectivity with Google API services for Geocoding and Street View Static APIs.
+6. For the Cloud Vision API, one will need to have the gcloud CLI installed on their machine (unless they are using a Google Cloud VM instance). Instructions for downloading this to ones machine can be found here: https://cloud.google.com/sdk/docs/install. 
+7. After installing the CLI, authenticate via the browser to the CLI and navigate to the WhereTo backend directory root. From this root, ensure that the current project is the project for which you enabled Cloud Vision API. This can be done with the command `gcloud config get-value project`  
+
+### Bunting Labs API Set Up
+
+The Bunting Labs OSM Extract API is vital to WhereTo's functionality. It is how WhereTo is able to navigate and traverse the streets in the area requested. In order to access Open Street Maps data in a simple way with our API, we integrate with the Bunting Labs API. The following are the steps to achieve connectivity:
+1. In config.py, the following should be placed: `osm_extract_http= "https://osm.buntinglabs.com/v1/osm/extract"`.
+2. Create a bunting labs account: https://buntinglabs.com/account/register, they will send an email for you to log in. 
+3. On the website once logged in, you should be able to see your API key. Place this in config.py as the following: `osm_extract_key= "your_free_api_key"`
+
 ## Frontend Installation and Use
 ## Backend Installation and Use
