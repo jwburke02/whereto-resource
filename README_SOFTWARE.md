@@ -157,6 +157,7 @@ The use of the backend in the WhereTo is entirely through the frontend, but the 
 
 The installation steps vary slightly depending on if you are hosting the backend locally or in the cloud. 
 
+### Locally Hosted
 Assuming prior API setup and Python installation, here are instructions if you are hosting locally using SQLite:
 1. Navigate to the root of the backend project directory in your terminal
 2. Create a Python virtual environment with `python3 -m venv venv`
@@ -165,6 +166,8 @@ Assuming prior API setup and Python installation, here are instructions if you a
 5. Create the local database using SQLite in the `datbase/` folder, named `datbase.db`. Using the SQLite CLI, add the tables defined in `database/WhereTo.sql` to database.db. Ensure the application is configured in the WhereTo module to run with SQLite.
 6. Run the application with `python3 app.py`.
 
+
+### Cloud Hosted
 Here is how to host the backend if you have a Cloud VM instance and a Cloud SQL instance available:
 1. Use the Google Cloud CLI in order to add the tables defined in the `database/WhereTo.sql` file to your Cloud SQL database. 
 2. SSH into your Cloud VM instance, exact commands for setup will now depend on the exact OS you select for your hosting.
