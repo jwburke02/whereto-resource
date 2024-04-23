@@ -148,8 +148,31 @@ Once the required API is enabled, you can create a Cloud SQL instance according 
 ### Google Cloud Compute Engine
 As stated above for Cloud SQL Enterprise, Google Cloud is the suggested Cloud provider to use for ease of integration with their APIs. In order to host the backend on the cloud, `Compute Engine API` needs to be enabled for your Google Cloud project.  
 
-Once the required API is enabled, you can create a Cloud VM instance in the Google Console according to the requirements you have. The only steadfast requirement of WhereTo in this configuration is a boot disk size of over ~50GB to account fo all of the dependencies of WhereTo. Further deployment procedures can be found below in [Backend Installation and Use](#Backend-Installation-and-Use). 
+Once the required API is enabled, you can create a Cloud VM instance in the Google Console according to the requirements you have. The only steadfast requirement of WhereTo in this configuration is a boot disk size of over ~50GB to account fo all of the dependencies of WhereTo. Further deployment procedures can be found below in [Backend Installation and Use](#Backend-Installation-and-Use). Make sure that this VM is given access to all of the required APIs, notably the Cloud Vision API.
 
 
 ## Frontend Installation and Use
 ## Backend Installation and Use
+The use of the backend in the WhereTo is entirely through the frontend, but the API can be accesed via the external IP and port of wherever you host the WhereTo main python server in app.py.  
+
+The installation steps vary slightly depending on if you are hosting the backend locally or in the cloud. 
+
+Assuming prior API setup and Python installation, here are instructions if you are hosting locally using SQLite:
+1. Navigate to the root of the backend project directory in your terminal
+2. Create a Python virtual environment with `python3 -m venv venv`
+3. Activate the Python virtual environment.
+4. Within the virtual environment, download the required dependencies with `pip install -r requirements.txt`.
+5. Create the local database using SQLite in the `datbase/` folder, named `datbase.db`. Using the SQLite CLI, add the tables defined in `database/WhereTo.sql` to database.db. Ensure the application is configured in the WhereTo module to run with SQLite.
+6. Run the application with `python3 app.py`.
+
+Here is how to host the backend if you have a Cloud VM instance and a Cloud SQL instance available:
+1. Use the Google Cloud CLI in order to add the tables defined in the `database/WhereTo.sql` file to your Cloud SQL database. 
+2. SSH into your Cloud VM instance, exact commands for setup will now depend on the exact OS you select for your hosting.
+3. Download and install git, python, python-pip, and python-venv to your system.
+4. Use git to clone the backend repository to the VM, navigate into the repository 
+5. Create a Python virtual environment with `python3 -m venv venv`
+6. Activate the Python virtual environment.
+7. Within the virtual environment, download the required dependencies with `pip install -r requirements.txt`.
+8. Ensure that the WhereTo module has the correct configuration for the database access link, which is the external IP of the Cloud SQL instance.
+9. Run the application from the SSH with `python3 app.py`.
+10. The application can be monitored from the SSH prior to closing or from Google Cloud logging after closing.
