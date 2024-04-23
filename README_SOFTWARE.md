@@ -108,7 +108,7 @@ The backend system relies on the following list of developement tools and essent
 - Bunting Labs OSM Extract API
 
 If the system is being hosted using cloud services, we have used Google Cloud Servies which adds the following developement tools and services to the list:
-- Google Cloud Enterprise SQL
+- Google Cloud SQL Enterprise
 - Google Cloud Compute Engine
 
 In order to develop and test the application, one will need to ensure their environment is set up to run these tools and connect with these services.
@@ -138,6 +138,18 @@ The Bunting Labs OSM Extract API is vital to WhereTo's functionality. It is how 
 1. In config.py, the following should be placed: `osm_extract_http= "https://osm.buntinglabs.com/v1/osm/extract"`.
 2. Create a bunting labs account: https://buntinglabs.com/account/register, they will send an email for you to log in. 
 3. On the website once logged in, you should be able to see your API key. Place this in config.py as the following: `osm_extract_key= "your_free_api_key"`
+
+### Google Cloud SQL Enterprise
+If you intend to host the backend in a cloud environment, it is suggested to opt for Google Cloud. The reasoning behind this is it allows for easier integration with the Google services that already build the backbond of the backend algorithms and data. In order to use Google Cloud to host both SQL Enterprise and Compute Engine, the `Compute Engine API` needs to be enabled for your previously created Google Cloud project.  
+
+Once the required API is enabled, you can create a Cloud SQL instance according to your requirements. Once this instance has been created, allow it to be accesssed by any virtual machines running on your project. Additionally, place the externap IP of your Cloud SQL instance in the WhereTo module at `app.config['SQLALCHEMY_DATABASE_URI']`. Further first time deployment procedures can be found below in [Backend Installation and Use](#Backend-Installation-and-Use).
+
+
+### Google Cloud Compute Engine
+As stated above for Cloud SQL Enterprise, Google Cloud is the suggested Cloud provider to use for ease of integration with their APIs. In order to host the backend on the cloud, `Compute Engine API` needs to be enabled for your Google Cloud project.  
+
+Once the required API is enabled, you can create a Cloud VM instance in the Google Console according to the requirements you have. The only steadfast requirement of WhereTo in this configuration is a boot disk size of over ~50GB to account fo all of the dependencies of WhereTo. Further deployment procedures can be found below in [Backend Installation and Use](#Backend-Installation-and-Use). 
+
 
 ## Frontend Installation and Use
 ## Backend Installation and Use
