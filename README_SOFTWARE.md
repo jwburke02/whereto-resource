@@ -84,7 +84,18 @@ The WhereTo module itself is a simple module that defines constants used by a fe
 
 Both the config.py and test/ modules are not shown in this diagram. The test/ module relies on every component present in the WhereTo backend system, as it is responsible for testing each one of the modules. The config.py module relies on no other module, and defines vital constants for application functionality.
 
-The config.py module is a file which should be defined on a person's local or cloud hosted instance. It should never be pushed to Github as it contains important api token and secret information which should not be made public. In order to compile and run the WhereTo backend, config.py MUST be added. It should contain the following, which will be elaborated on later: the constants map_api_key, osm_extract_key, and osm_extract_http.
+The config.py module is a file which should be defined on a person's local or cloud hosted instance. It should never be pushed to Github as it contains important api token and secret information which should not be made public. In order to compile and run the WhereTo backend, config.py MUST be added. It should contain the following, which will be elaborated on later: the constants map_api_key, osm_extract_key, and osm_extract_http.  
+
+Below is a table showing the backend system from the outside perspective, where there are two possible endpoints:
+
+<br />
+
+| Endpoint | Method | Description | Request Body | Response |
+|----------|--------|-------------|--------------|----------|
+| `/park` | POST | Evaluate parking regulations in area | Address and Radius | Dictionary mapping streets to detections |
+| `/detail` | POST | Get information about detection ID | Detection ID | Detailed detection information |
+
+<br />
 
 ## Frontend Dev Tool Information
 ## Backend Dev Tool Information
