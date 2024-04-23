@@ -60,7 +60,31 @@ Below are simple descriptions of each module in the backend:
 - config.py Module:
     - This module is defined separately for each instance where the WhereTo backend is hosted. Elaborated on later.  
 
-Below is a high level diagram, showing the relationships between each of these modules in the backend.
+Below is a high level diagram, showing the relationships between each of these modules in the backend.  
+![Alt text](./Assets/BackendSoftwareOverview.png)  
+Figure 2 - WhereTo backend software system diagram  
+
+The high level perspective shows the interactions between each of the modules in the backend Python server.
+
+The application is run by using the app.py driver code. This main module depends directly on the Park API and Detail API, as well as the WhereTo core module constants. App.py adds both the Park and Detail APIs as resources, giving them endpoints on the server. App.py then begins to run the server if it is run as a script, rather than a module. It does this through importing both the api and app constants from the WhereTo core module.
+
+The Park API is an endpoint, hosted on the app.py server, which computes parking regulations by detecting road signs and parking meters in a given area. In order to perform this computation, Park API relies on both the OSM and Machine Learning modules, which are internal to the WhereTo system. The Park API operates by first error checking the address and radius inputs. After ensuring that the inputs are correctly formatted and valid, the Park API proceeds to query Open Street Maps data through the OSM module. It then uses this data to run the object detection model, via the Machine Learning module. After running both of these processes, the Park API formats the output into a list of detections, attempts to sanitize it for duplicate outputs, and returns a response to the requester.
+
+The OSM module is an internal module to the WhereTo backend software system. The OSM module does not depend on any other internal components, although it does depend on an external API. It implements a number of functions for querying Open Street Maps via the Bunting Labs extract API. The main function in the module, query_osm, calls this extract API, and then maps the output using a helper function, map_geo_data, to a more usable format. This format is a dictionary, where each entry is a street name and a list of coordinates in order representing the traversal down the street.
+
+The Machine Learning module is another module that is internal to WhereTo. The Machine Learning module is how WhereTo is able to detect objects in an area, read text from road signs, and store the information for later use. The module is able to accomplish these tasks through interactions with the Text Processing, Database Access, and WhereTo internal modules. Additionally, the Machine Learning module relies on the Google Street View Static image API in order to collect data. The most important function in the Machine Learning module is the run_model function. This function iterates through each street inside of the dictionary returned from the OSM module functions. For each street, it iterates through the coordinates, downloading image data from Google Street View, and processing the images through the machine learning algorithm to detect objects and determine parking regulations.
+
+Text Processing is a very simple internal module. It relies only on Google Cloud Vision API, and does not depend on any internal WhereTo components. The Text Processing module only has one function, which accepts an input image and attempts to read any text from the image. It returns a string which is all the text read from the image. One string should theoretically contain enough information in this case, as the Text Processing module is only called on images of cropped single road signs.
+
+The Detail API is the other endpoint, besides Park API, hosted on the app.py server. The Detail API only relies on the Database Access module for internal components, but also relies on Google API services for geocoding and downloading image data. The Detail API accepts a detection id in a request, and returns detailed information about this detection id, including a photograph of it, and the text from it, if it is a road sign. The Detail API relies on Database Access in order to retrieve information about a given detection id.
+
+The Database Access module relies only on the WhereTo internal component for retrieving the db constant. Additionally, the Database Access module relies on connectivity to wherever the WhereTo database is stored, be that locally in SQLite or on the Cloud. The Database Access module implements every function which requires querying the database in order to retrieve or update information. It is a wrapper around the SQL cache of the WhereTo system.
+
+The WhereTo module itself is a simple module that defines constants used by a few of the components in the WhereTo backend. WhereTo defines the app, api, model, and db constants. These constants are used across the application. This module is also where the SQL link is assigned for Flask SQLAlchemy; therefore, when attempting to switch between locally hosted and cloud hosted SQL environments, this configuration should be modified.
+
+Both the config.py and test/ modules are not shown in this diagram. The test/ module relies on every component present in the WhereTo backend system, as it is responsible for testing each one of the modules. The config.py module relies on no other module, and defines vital constants for application functionality.
+
+The config.py module is a file which should be defined on a person's local or cloud hosted instance. It should never be pushed to Github as it contains important api token and secret information which should not be made public. In order to compile and run the WhereTo backend, config.py MUST be added. It should contain the following, which will be elaborated on later: the constants map_api_key, osm_extract_key, and osm_extract_http.
 
 ## Frontend Dev Tool Information
 ## Backend Dev Tool Information
