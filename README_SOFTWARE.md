@@ -64,6 +64,8 @@ Here's a detailed breakdown of the frontend architecture for the WhereTo applica
 - Styles and Utilities:
     - Include CSS stylesheets that define the aesthetic elements of the application, ensuring a consistent and engaging user interface.
     - Utility functions help with processing tasks such as formatting responses from the backend or handling image data conversions,              supporting the functional aspects of the frontend modules.
+  ![Alt text](./Assets/FrontendSoftwareOverview.png)  
+
   
 ## Modular Overview Backend  
 
