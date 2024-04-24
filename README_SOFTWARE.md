@@ -234,6 +234,36 @@ Once the required API is enabled, you can create a Cloud VM instance in the Goog
 
 
 ## Frontend Installation and Use
+
+### Frontend Installation 
+
+Environment Setup:
+    - Ensure that Node.js and npm (Node Package Manager) are installed on your system. You can download them from Node.js official site.
+  
+Clone the Repository:
+    - Obtain the frontend code by cloning the repository using Git, or by downloading the source files directly from project's repository.
+
+Navigate to Your Project Directory:
+    - `cd whereto-react-native-ui`
+
+Install Dependencies:
+Run the following command to install the necessary dependencies listed in package.json:
+    - `npm install`
+
+Expo Setup:
+Since the project utilizes Expo for managing the React Native environment, ensure Expo CLI is installed:
+    - `npm install -g expo-cli`
+
+### Running Frontend 
+
+Start the Development Server:
+- Use the following command to start the Expo development server:
+    - `npx expo start`
+ 
+Using Expo Go App:
+- Connect your mobile device to the same wireless network as your computer
+- Use the Expo Go app to scan the QR code from your Terminal
+
 ## Backend Installation and Use
 The use of the backend in the WhereTo is entirely through the frontend, but the API can be accesed via the external IP and port of wherever you host the WhereTo main python server in app.py.  
 
