@@ -157,11 +157,11 @@ Development of the WhereTo frontend requires the following environment setup:
 - Use Expo CLI for running the application on a simulator or a physical device, which requires the installation of Expo Go on the latter.
 - React Native CLI: A command-line tool for initializing and working with React Native projects.
 
-Install Expo CLI
+### Install Expo CLI
 Open a terminal or command prompt, and install the Expo CLI globally using npm by running:
 - `npm install -g expo-cli`
 
-Install the Expo Go App
+### Install the Expo Go App
 - Download the Expo Go app from the Google Play Store or Apple App Store on your mobile device.
 - Make sure your computer and mobile device are connected to the same Wi-Fi network.
 
