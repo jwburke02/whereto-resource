@@ -152,7 +152,7 @@ The WhereTo frontend is constructed with an array of development tools and servi
 - Google Places API: Enhances address input functionality through autocomplete suggestions.
 - Expo Location: Fetches the geographical location of the user.
 
-Development of the WhereTo frontend requires the following environment setup:
+### Development of the WhereTo frontend setup
 - Install Node.js and npm, which includes the React Native command-line interface, the JavaScript runtime and package manager needed to       manage the application's dependencies
 - Use Expo CLI for running the application on a simulator or a physical device, which requires the installation of Expo Go on the latter.
 - React Native CLI: A command-line tool for initializing and working with React Native projects.
