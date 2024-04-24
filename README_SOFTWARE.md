@@ -64,9 +64,23 @@ Here's a detailed breakdown of the frontend architecture for the WhereTo applica
 - Styles and Utilities:
     - Include CSS stylesheets that define the aesthetic elements of the application, ensuring a consistent and engaging user interface.
     - Utility functions help with processing tasks such as formatting responses from the backend or handling image data conversions,              supporting the functional aspects of the frontend modules.
-  ![Alt text](./Assets/FrontendSoftwareOverview.png)  
+  ![Alt text](./Assets/FrontendSoftwareOverview.png)
 
-  
+The frontend architecture of the WhereTo application is the backbone for connecting the user's needs to the robust backend processing of parking data. The frontend is made with React Native, allowing for a seamless and responsive user experience on both iOS and Android platforms.
+
+The frontend architecture orchestrates the flow of data between the user interface and the backend systems. It manages this through the InputDisplay module, which collects user input and dispatches API calls to the backend's /park endpoint. Once the data is fetched, the MapDisplay module updates to show the current parking situation, represented by markers on the map. The frontend also communicates with the backend's /detail endpoint to retrieve detailed information about each parking detection when a user interacts with a marker. This interaction pattern showcases the frontend's ability to handle both the initiation of data retrieval processes and the subsequent presentation of this data in a user-friendly format.
+
+The InputDisplay component serves as the initial user interface, offering a streamlined method for input gathering and validation. It employs the Google Places Autocomplete functionality for efficient address input and employs the Expo Location API for retrieving the user's current location. A Help Modal is integrated within this module to provide instructional support. Additionally, the InputDisplay module transforms the search radius into backend-compatible units and interfaces with Axios to manage API calls. On triggering a search, it dispatches a request to the backend's '/park' endpoint and manages the response, whether it's a successful data retrieval or an error message. The module also controls UI elements such as loading indicators and error messages to communicate the application's state to the user effectively.
+
+The frontend architecture utilizes Axios for API interactions, constructing requests that are then dispatched to the backend's /park endpoint. It handles these interactions by managing the states of the requests and systematically presenting the user with UI feedback. During the request lifecycle, Axios plays a pivotal role in managing state transitions that indicate data fetching progress and relaying any errors back to the user interface. This ensures that users are well-informed of the app's current state, enhancing the user experience.
+
+Upon receiving user inputs, the frontend leverages external APIs to translate addresses into precise geographic coordinates. It then invokes the react-native-maps library to render an interactive map, populating it with markers that correspond to available parking data obtained from the backend. This integration with the backend is streamlined, involving requests to the '/detail' endpoint for enriched information on selected parking spots. The modular design ensures that the system handles user interactions efficiently, overlaying the relevant parking data on the map and enabling users to retrieve detailed information with a simple touch interaction. This setup underscores the frontend’s role in facilitating a seamless flow of information from the backend algorithms to the user interface.
+
+Within the frontend's MapDisplay module, interactivity is key; users can engage with the map markers to reveal comprehensive details of each parking location. When a marker is selected, a modal is triggered, displaying information such as the parking spot's address, the confidence level of the detection, and the associated image. The image handling mechanism within this module is particularly adept, converting base64-encoded strings back to binary format for image rendering, thereby streamlining the data transfer process. This efficient encoding strategy allows the embedding of image data directly within API responses, reducing the need for additional HTTP requests.
+In terms of visual options, the MapDisplay module provides a feature to toggle between standard and satellite views of the map, enhancing user experience by offering diverse visual representations of the terrain. This function exemplifies the module's versatile presentation capabilities, accommodating user preferences for map displays.
+
+
+
 ## Modular Overview Backend  
 
 Below are simple descriptions of each module in the backend:  
