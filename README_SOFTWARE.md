@@ -36,6 +36,35 @@ If there is an error at any point in the process, the Python server sends such i
 The last important thing to remember from a high level perspective is what is meant by the word “detection”. A detection in our system is wherever our machine learning object detection models recognize one of three things: a single-space parking meter, a multi-space parking meter, and a road sign. Each of these has different implications and displays on the frontend.
 
 ## Modular Overview Frontend
+
+Here's a detailed breakdown of the frontend architecture for the WhereTo application, structured into distinct modules and components:
+
+- InputDisplay Module:
+    - Manages user inputs for address and radius using a React component.
+    - Utilizes the Google Places API for address autocomplete to enhance user experience.
+    - Incorporates a dropdown picker for selecting search radius, simplifying user interaction.
+    - Handles the sending of user parameters to the backend via Axios, initiating the search process.
+- MapDisplay Module:
+    - Renders the search results on an interactive map using React Native Maps.
+    - Displays custom markers at detected parking locations which users can interact with to obtain more details.
+    - Integrates a dynamic display of parking information, updating in real-time as the user explores the map.
+- MarkerInfoModal Component:
+    - A modal that pops up when a user taps on a map marker, showing detailed information about the parking detection.
+    - Displays data such as the confidence level of the detection, the exact address, and any relevant images.
+    - Enhances user interaction by providing in-depth details about specific parking spots.
+- HelpModal Component:
+    - Provides users with guidance on how to navigate the map and utilize the application effectively.
+    - Aims to enhance user understanding and ensure a smoother user experience by clarifying application functionalities.
+- CustomMarker Component:
+    - Used within the MapDisplay module to render markers with custom icons on the map.
+    - Differentiates between types of detections (e.g., parking meters vs. road signs) by using distinct icons, making it visually easy for       users to identify the type of information provided.
+- App Component:
+    - Serves as the root component that orchestrates the display of either the InputDisplay or MapDisplay based on user interaction.
+    - Manages key state variables like whether the map is being displayed and what data it should show, facilitating communication between        the user interface and the backend.
+- Styles and Utilities:
+    - Include CSS stylesheets that define the aesthetic elements of the application, ensuring a consistent and engaging user interface.
+    - Utility functions help with processing tasks such as formatting responses from the backend or handling image data conversions,              supporting the functional aspects of the frontend modules.
+  
 ## Modular Overview Backend  
 
 Below are simple descriptions of each module in the backend:  
