@@ -143,6 +143,43 @@ Below is a table showing the backend system from the outside perspective, where 
 <br />
 
 ## Frontend Dev Tool Information
+
+The WhereTo frontend is constructed with an array of development tools and services designed to create a responsive and user-friendly mobile application. Key technologies and services include:
+- React Native: Utilized for building cross-platform mobile applications.
+- React Native Maps: Facilitates the display and interaction with geographical data.
+- React Native Dropdown Picker: Provides dropdown selections for user inputs.
+- Axios: Manages API requests to the backend.
+- Google Places API: Enhances address input functionality through autocomplete suggestions.
+- Expo Location: Fetches the geographical location of the user.
+
+Development of the WhereTo frontend requires the following environment setup:
+- Install Node.js and npm, which includes the React Native command-line interface, the JavaScript runtime and package manager needed to       manage the application's dependencies
+- Use Expo CLI for running the application on a simulator or a physical device, which requires the installation of Expo Go on the latter.
+- React Native CLI: A command-line tool for initializing and working with React Native projects.
+
+Install Expo CLI
+Open a terminal or command prompt, and install the Expo CLI globally using npm by running:
+- `npm install -g expo-cli`
+
+Install the Expo Go App
+- Download the Expo Go app from the Google Play Store or Apple App Store on your mobile device.
+- Make sure your computer and mobile device are connected to the same Wi-Fi network.
+
+For detailed interaction with backend services, developers should:
+- Configure Axios to connect with the backend server, whether it's hosted locally or on the cloud.
+- Manage API keys for Google Places API securely.
+
+The frontend integrates with cloud services when hosted on platforms such as Expo, which facilitates the building, deployment, and quick iteration of React Native applications. For local development, React Native Debugger or similar tools can be used for debugging and state management inspection.
+
+### Google API and Account Set Up
+
+In order to use the Street View and Geocoding APIs from Google, you will need access to them via an API key. This API key must be granted permission under the Google Cloud Console to access the Street View and Geocoding APIs. Inside of the config.py file in the backend, map_api_key is stored. This key is the API key for all Google services used by WhereTo via HTTP request. The following process is how to obtain a valid API key for these Google services:
+1. Sign into your Google account, and go to: https://console.cloud.google.com/
+2. Create a New Project, giving it a Project Name
+3. With that project selected on the console, navigate to the `APIs & Services` tab, and click on the `+ ENABLE APIS AND SERVICES` button
+4. Enable the following APIs: `Places API`
+5. Place the automatically created API key into the map_api_key value in config.py. This will enable application connectivity with Google API services for Geocoding and Street View Static APIs.
+
 ## Backend Dev Tool Information
 
 The backend system relies on the following list of developement tools and essential services:
