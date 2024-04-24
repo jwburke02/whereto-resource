@@ -145,12 +145,12 @@ Below is a table showing the backend system from the outside perspective, where 
 ## Frontend Dev Tool Information
 
 The WhereTo frontend is constructed with an array of development tools and services designed to create a responsive and user-friendly mobile application. Key technologies and services include:
-- React Native: Utilized for building cross-platform mobile applications.
-- React Native Maps: Facilitates the display and interaction with geographical data.
-- React Native Dropdown Picker: Provides dropdown selections for user inputs.
-- Axios: Manages API requests to the backend.
-- Google Places API: Enhances address input functionality through autocomplete suggestions.
-- Expo Location: Fetches the geographical location of the user.
+- **React Native**: Utilized for building cross-platform mobile applications.
+- **React Native Maps**: Facilitates the display and interaction with geographical data.
+- **React Native Dropdown Picker**: Provides dropdown selections for user inputs.
+- **Axios**: Manages API requests to the backend.
+- **Google Places API**: Enhances address input functionality through autocomplete suggestions.
+- **Expo Location**: Fetches the geographical location of the user.
 
 ### Development of the WhereTo frontend setup
 - Install Node.js and npm, which includes the React Native command-line interface, the JavaScript runtime and package manager needed to       manage the application's dependencies
